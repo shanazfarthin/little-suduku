@@ -1,0 +1,337 @@
+/* Global Styles */
+body {
+  font-family: 'Comic Sans MS', 'Baloo Bhai', sans-serif;
+  background: url('baground.png') no-repeat center center fixed;
+  background-size: cover; /* Ensures the background image covers the entire screen */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #8a0cb0; /* Ensure text color contrasts well with the background */
+}
+
+/* App Container */
+.App {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+.fish-animation {
+  position: absolute;
+  animation: moveFish 5s linear infinite;
+  width: 150px; /* Adjust the size here */
+  height: auto; /* Keeps the aspect ratio intact */
+}
+
+@keyframes moveFish {
+  0% { left: 0; top: 0; }
+  50% { left: 50%; top: 100%; }
+  100% { left: 100%; top: 0; }
+  
+}
+.fish-animation2 {
+  position: absolute;
+  animation: moveFishReverse 5s linear infinite;
+  width: 200px; /* Adjust the size of the second fish */
+  height: auto; 
+}
+
+@keyframes moveFishReverse {
+  0% { 
+    right: -10%; /* Start from outside the right */
+    top: 20%;
+  }
+  50% { 
+    right: 50%; /* Move to the center */
+    top: 70%; 
+  }
+  100% { 
+    right: 110%; /* End outside the left side */
+    top: 20%; 
+  }
+}
+
+.fish-animation3 {
+  position: absolute;
+  animation: moveJellyfish 5s linear infinite;
+  width: 150px; /* Adjust the size of the jellyfish */
+  height: auto; 
+  right: -1500px; /* Position it on the left side */
+}
+
+@keyframes moveJellyfish {
+  0% { 
+    left: 50%; /* Start from the center horizontally */
+    top: 0%;   /* Start at the top vertically */
+  }
+  50% { 
+    left: 50%; /* Stay in the center horizontally */
+    top: 50%;  /* Move down to the middle vertically */
+  }
+  100% { 
+    left: 50%; /* Stay in the center horizontally */
+    top: 0%;   /* Move back up to the top vertically */
+  }
+}
+
+
+/* Headings */
+h1 {
+  color: #da2a2a;
+  font-size: 32px;
+  text-shadow: 1px 1px 3px #FFFACD;
+}
+h2 {
+  color: #df5827;
+  font-size: 30px;
+  text-shadow: 1px 1px 3px #FFFACD;
+}
+h3 {
+  color: #FF7F50;
+  font-size: 25px;
+  text-shadow: 1px 1px 3px #705fc9;
+}
+
+/* Sudoku Container */
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align everything */
+  justify-content: center; /* Vertically center the content */
+  height: 100vh; /* Adjusted for better layout */
+  width: 100%;
+}
+
+/* Sudoku Grid */
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* 9 columns for Sudoku */
+  gap: 5px;
+  margin-bottom: 20px; /* Space between grid and info */
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  border: 2px solid #276561;
+  border-radius: 10px;
+  transition: border-color 0.3s, background-color 0.3s;
+  background-color:  #f6e58d;
+}
+
+.cell:focus {
+  border-color: #87CEEB;
+  background-color: #FFFACD;
+}
+
+.cell.error {
+  border-color: red;
+  background-color: #FFE6E6;
+}
+
+.grid.completed .cell {
+  border-color: green;
+  background-color: #EAFFEA;
+}
+
+/* Sudoku Information */
+.sudoku-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.sudoku-info h1 {
+  color: #FF7F50;
+  font-size: 24px;
+}
+
+.sudoku-info h2 {
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+/* Level Selector */
+.level-selector {
+  position: absolute;
+  left: -200px; /* Align to the left side */
+  top: 20px;  /* Adjust the vertical position */
+  font-family: 'Baloo Bhai', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: slideInFromLeft 1s ease-out; /* Apply the slide-in animation */
+}
+
+/* Level buttons inside the selector */
+.level-button {
+  width: 100px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #da2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  margin-bottom: 10px; /* Adds space between buttons */
+}
+
+/* Hover effect for the buttons */
+.level-button:hover {
+  transform: scale(1.2);
+  background-color: #f5ae37;
+}
+
+/* Active button styling */
+.level-button.active {
+  background-color: #5adf3b;
+  transform: scale(1.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the h3 text */
+.level-selector h3 {
+  word-wrap: break-word;  /* Forces wrapping */
+  white-space: normal;    /* Allows normal text wrapping */
+}
+
+/* Slide-in animation from the left */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%); /* Start from the left, outside the viewport */
+  }
+  to {
+    transform: translateX(0); /* End at its normal position */
+  }
+}
+
+
+/* Mission Buttons */
+.controls-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+  
+}
+
+.mission-check-button,
+.try-again-button {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px; /* Adjust this value to move the buttons lower */
+  margin-right: 20px; /* Add a gap between the buttons */
+}
+
+.mission-check-button {
+  background-color: #f5ae37;
+}
+
+.mission-check-button:hover {
+  background-color: #1bd0cd;
+  transform: scale(1.05);
+}
+
+.try-again-button {
+  background-color: #f5ae37;
+}
+
+.try-again-button:hover {
+  background-color: #1bd0cd;
+  transform: scale(1.05);
+}
+
+/* Optional: If you want to make sure the buttons are on the same line */
+.buttons-container {
+  display: flex;
+  gap: 100px;  /* Adds space between the buttons */
+  align-items: center; /* Aligns the buttons vertically */
+}
+
+/* Correct/Incorrect Message */
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.correct-message {
+  color: green;
+}
+
+.incorrect-message {
+  color: red;
+}
+
+/* Apply the slide-in animation */
+.level-selector h3 {
+  animation: slideInFromLeft 2s ease-out;
+}
+
+ 
+  
+  /* Any content above the background will be placed here */
+  .content {
+    position: relative;  /* Keeps it on top of the background */
+    z-index: 1;  /* Content stays above fish animation */
+  }
+  /* Default styles (for large screens) */
+body {
+  font-size: 16px;
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: row; /* For larger screens */
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* For tablets or smaller screens */
+  }
+}
+
