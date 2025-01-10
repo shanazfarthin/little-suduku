@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/little-suduku/static/css/main.729a2301.css",
+    "main.js": "/little-suduku/static/js/main.d5eca21c.js",
+    "static/js/156.7b3dfb93.chunk.js": "/little-suduku/static/js/156.7b3dfb93.chunk.js",
+    "static/media/baground.png": "/little-suduku/static/media/baground.343e538772545119d379.png",
+    "static/media/fish3.svg": "/little-suduku/static/media/fish3.a2d197121cb0113e739b4255e3f8eaf6.svg",
+    "static/media/fish1.svg": "/little-suduku/static/media/fish1.0370d1fdb008853625cafabbc9ab804e.svg",
+    "static/media/fish2.svg": "/little-suduku/static/media/fish2.8b76b192df53475d96b4a8bf8a58cfa4.svg",
+    "index.html": "/little-suduku/index.html",
+    "main.729a2301.css.map": "/little-suduku/static/css/main.729a2301.css.map",
+    "main.d5eca21c.js.map": "/little-suduku/static/js/main.d5eca21c.js.map",
+    "156.7b3dfb93.chunk.js.map": "/little-suduku/static/js/156.7b3dfb93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.729a2301.css",
+    "static/js/main.d5eca21c.js"
+  ]
+}
