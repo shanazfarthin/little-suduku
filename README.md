@@ -16,7 +16,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/little-learner-sudoku.git
+git clone https://github.com/shanazfathin/little-suduku.git
 Navigate to the project directory:
 
 bash
