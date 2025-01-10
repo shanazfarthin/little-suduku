@@ -1,5 +1,9 @@
 {
   "name": "first-sudoku",
+<<<<<<< HEAD
+=======
+  "homepage": "https://shanazfarthin.github.io/little-suduku",
+>>>>>>> 32fa36e (Initial commit)
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +13,11 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+<<<<<<< HEAD
+=======
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+>>>>>>> 32fa36e (Initial commit)
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -32,4 +41,8 @@
       "last 1 safari version"
     ]
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 32fa36e (Initial commit)
